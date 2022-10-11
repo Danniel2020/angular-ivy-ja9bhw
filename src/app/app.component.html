@@ -1,0 +1,14 @@
+<hello name="{{ name }}"></hello>
+<p>Aprendiendo Angular con Platzi</p>
+
+<p>Agrega un nombre</p>
+<input type="text" required [(ngModel)]="nuevoNombre" />
+<button (click)="agregarNombre()">Agregar Nombre</button>
+
+<ul>
+  <li *ngIf="nombres.length === 0">Se encuentra vacia</li>
+  <li *ngFor="let nombre of nombres; index as i">
+    {{ i }} {{ nombre }}
+    <button (click)="EliminarNombre(i)">Eliminar</button>
+  </li>
+</ul>
